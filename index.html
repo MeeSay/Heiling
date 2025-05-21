@@ -79,9 +79,7 @@
                         <div class="main-title color-black">
                             <p>Our latest projects</p>
                         </div>
-                        <div class="main-all color-black">
-                            <p>All Projects</p>
-                        </div>
+                        <a href="!#" class="main-all color-black">All Project</a>           
                     </div>
                 </div>
                 <div>
@@ -115,9 +113,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit mauris etiam faucibus laoreet vestibulum nam. Gravida aenean orci, facilisis senectus.
                                 </p>
                             </div>
-                            <p class="main-all color-white">
-                                See All Designers
-                            </p>
+                            <a href="!#" class="main-all color-white">See All Designers</a>
                         </div>
                         <img srcset="./image/designer.png 2x" alt="designer">                    
                     </div>
@@ -129,9 +125,7 @@
                     <p class="main-title color-black">
                         Our latest articles
                     </p>
-                    <p class="main-all color-black">
-                        Read All Articles
-                    </p>
+                    <a href="!#" class="main-all color-black">Read All Articles</a>
                 </div>
                 <div class="container">
                     <div class="articles-image">
@@ -142,9 +136,7 @@
                             </p>
                             <img class="articles-line" srcset="./image/articles-line.png 2x" alt="articles-line">
                             <div class="flexcenter">
-                                <p class="articles-readmore">
-                                    Read More
-                                </p>
+                                <a href="!#" class="articles-readmore" >Read More</a>
                                 <p class="articles-date">
                                     April 30, 2020
                                 </p>
@@ -157,9 +149,7 @@
                             </p>
                             <img class="articles-line" srcset="./image/articles-line.png 2x" alt="articles-line">
                             <div class="flexcenter">
-                                <p class="articles-readmore">
-                                    Read More
-                                </p>
+                                <a href="!#" class="articles-readmore" >Read More</a>
                                 <p class="articles-date">
                                     April 30, 2020
                                 </p>
@@ -168,8 +158,11 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Start contact -->
             <div class="contact">
                 <img srcset="./image/gototop.png 2x" alt="gototop">
+                <btn class="contact-link" id="gototop" onclick="goToTop()">Go to the top</btn>
                 <div class="container">
                     <div class="contact-body">
                         <div class="contact-left">
@@ -215,5 +208,16 @@
         </main>
 
     </div> 
+    <script>
+        var btn = document.getElementById("gototop")
+
+        function goToTop(){
+            window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+            });
+        }
+    </script>
 </body>
+
 </html>
