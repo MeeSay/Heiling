@@ -135,9 +135,44 @@ body {
     opacity: 0.6;
     margin-top: 4.7rem;
   }
-  &-img{
-    transform: translate(0, 78px);
+  &-img-small{
+    transform: translate(-765px, 78px);
   }
+  @media screen and (max-width: 1023.98px) {
+    &-heading-child{
+      display: none;
+    }
+    &-main{
+      flex-direction: column-reverse;
+      padding-top: 8rem;
+    }
+    &-images{
+      position: relative;
+      align-self: stretch;
+    }
+    &-img-small{
+      transform: none;
+      position: absolute;
+      right: 15px;
+      bottom: 30px;
+    }
+    &-img-large{
+      width: 100%;
+      max-width: 330px;
+    }
+    &-heading{
+      font-size: 4.6rem;
+      padding-bottom: 40px;
+      padding-top: 80px;
+    }
+    &-text{
+      font-size: 1.8rem;
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+  }
+  
 }
 
 .menu{
@@ -159,6 +194,33 @@ body {
     font-family: var(--secondary-font);
     font-size: 2.4rem;
   }
+  &-toggle{
+    display: none;
+    width: 24px;
+    span{
+      height: 3px;
+      width: 100%;
+      background-color: var(--secondary-color);
+    }
+    span.line-first{
+      width: 45%;
+    }
+  }
+  
+  @media screen and (max-width: 1023.98px) {
+    display: none;
+    &-contact{
+      font-size: 1.8em;
+      margin-left: auto;
+    }
+    &-toggle{
+      display: inline-flex;
+      flex-direction: column;
+      margin-left: 30px;
+      gap: 9px;
+    }
+  }
+  
 }
 
 
@@ -240,6 +302,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 77.5rem;
+    padding-bottom: 6.5rem;
     &-top{
       font-family: var(--primary-font);
       color: #F8F3ED;
@@ -249,7 +312,6 @@ body {
       font-family: var(--secondary-font);
       color: #F8F3ED;
       font-size: 2.4rem;
-      letter-spacing: -2px;
       text-decoration-line: underline;
     }
   }
