@@ -65,11 +65,11 @@
                     </div>
                     <div class="stories-image">
                         <img srcset="./image/stories-pic1.png 2x" alt="stories picture left">
-                        <div class="stories-image-left">
+                        <div class="stories-image-right">
                             <img srcset="./image/stories-pic2.png 2x" alt="stories picture right">
                             <img class="stories-line" srcset="./image/stories-line.png 2x" alt="stories line">
-                            <div class="stories-content">
-                                <p>We don’t renovate space, we transform them</p>
+                            <div class="stories-content stories-content-mobile">
+                                <p >We don’t renovate space, we transform them</p>
                             </div>
                         </div>
                     </div>
@@ -83,21 +83,18 @@
                         <div class="main-title color-black">
                             <p>Our latest projects</p>
                         </div>
-                        <a href="!#" class="main-all color-black">All Project</a>           
+                        <a href="!#" target="_blank" class="main-all color-black">All Project</a>           
                     </div>
                 </div>
                 <div>
                     <div class="project-image">
-                        <div class="container">
                             <div class="project-footer">
-                                <div>
+                                <div class = "facb-shrink">
                                     <p class="project-footer-top">Dining Room</p>
                                     <a href="!#" class="project-footer-bottom">View Details</a>
                                 </div>
-                                <img srcset="./image/four-point.png 2x" alt="four point">
-                            </div>
-                            
-                        </div>
+                                <img class = "project-footer-point" srcset="./image/four-point.png 2x" alt="four point">
+                            </div>  
                     </div>
                 </div>
             </div>
@@ -165,8 +162,12 @@
 
             <!-- Start contact -->
             <div class="contact">
-                <img srcset="./image/gototop.png 2x" alt="gototop">
-                <btn class="contact-link" id="gototop" onclick="goToTop()">Go to the top</btn>
+                
+                <img class="pc-none" srcset="./image/logo.png 2x" alt="heiling">
+                
+                <img class="mobile-none"srcset="./image/gototop.png 2x" alt="gototop">
+                <btn class="mobile-none contact-link" id="gototop" onclick="goToTop()">Go to the top</btn>
+                
                 <div class="container">
                     <div class="contact-body">
                         <div class="contact-left">
@@ -202,7 +203,7 @@
                         <p class="contact-footer-text">
                             ©Heling 2021.
                         </p>
-                        <img srcset="./image/logo.png 2x" alt="heiling">
+                        <img class="mobile-none" srcset="./image/logo.png 2x" alt="heiling">
                         <p class="contact-footer-text">
                             Privacy Policy
                         </p>

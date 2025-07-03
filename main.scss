@@ -56,9 +56,10 @@ body {
 
 //xem lai
 .container{
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 15px;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .font-heading{
@@ -70,6 +71,10 @@ body {
   margin: auto;
   width: 100%;
   max-width: 1445px;
+  @media screen and (max-width: 1024px) {
+    max-width: 396px;
+  }
+  
 }
 
 .color{
@@ -138,6 +143,7 @@ body {
   &-img-small{
     transform: translate(-765px, 78px);
   }
+  
   @media screen and (max-width: 1023.98px) {
     &-heading-child{
       display: none;
@@ -149,6 +155,7 @@ body {
     &-images{
       position: relative;
       align-self: stretch;
+      
     }
     &-img-small{
       transform: none;
@@ -169,6 +176,12 @@ body {
       font-size: 1.8rem;
       padding-top: 40px;
       padding-bottom: 60px;
+    }
+    &-infor{
+      margin-top: 0px;
+    }
+    &-text{
+      margin-top: 0px;
     }
 
   }
@@ -225,24 +238,40 @@ body {
 
 
 .main{
-&-title{
-  font-family: var(--secondary-font);
-  // color: var(--primary-color);
-  font-size: 7rem;
-  letter-spacing: -2px;
-}
-&-description{
-    font-family: var(--primary-font);
+  &-title{
+    font-family: var(--secondary-font);
     // color: var(--primary-color);
-    font-size: 2.4rem;
-    opacity: 0.7;
+    font-size: 7rem;
+    letter-spacing: -2px;
   }
-&-all{
-    font-family: var(--secondary-color);
-    font-size: 2.4rem;
-    text-decoration-line: underline;
+  &-description{
+      font-family: var(--primary-font);
+      // color: var(--primary-color);
+      font-size: 2.4rem;
+      opacity: 0.7;
+    }
+  &-all{
+      font-family: var(--secondary-color);
+      font-size: 2.4rem;
+      text-decoration-line: underline;
+    }
+
+    @media screen and (max-width: 1024px) {
+    &-title{
+      font-size: 4.6rem;
+      letter-spacing: 0px;
+    }
+    &-description{
+      font-size: 1.8rem;
+    }   
+    &-all{
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
   }
 }
+
+
 
 .stories{
   padding-top: 18rem;
@@ -252,6 +281,10 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 23.8rem;
+
+    color: #2D2D2D;
+    font-size: 5.2rem;
+    font-family: var(--secondary-font);
   }
   &-image{
     display:flex;
@@ -260,22 +293,48 @@ body {
     gap: 14rem;
     padding-top: 11rem;
   }
-  &-image-left{
+  &-image-right{
     margin-top: 13.5rem;
     display:flex;
     flex-direction: column;
     gap:4rem;
-  }
-  &-content{
-    color: #2D2D2D;
-    font-size: 5.2rem;
-    font-family: var(--secondary-font);
   }
   &-line{
     width: 100%;
     max-width: 40.7rem;
     margin: auto;
   }
+  @media screen and (max-width: 1024px) {
+    padding-top: 100px;;
+  &-content{
+    flex-direction: column;
+    gap: 20px;
+  }
+  &-image{
+    flex-direction: column;
+    padding-top: 70px;
+    gap: 60px;
+  }
+  &-image-right{
+    margin-top: 0px;
+  }
+  &-content-mobile{
+    text-align: center;
+    font-size: 3.6rem;
+  }
+  }
+  
+}
+
+.flex-item{
+  display: flex;
+}
+
+.facb-shrink{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
 }
 
 .project{
@@ -292,21 +351,34 @@ body {
     background-size: auto 100%; //chiều rộng giữ nguyên, chiều cao bằng chiều cao thẻ chứa
     background-repeat: no-repeat;
     height: 100vh; //chiều cao bằng toàn bộ màn hình
-
+    background-color: #222120;
     display:flex;
     flex-direction: column; //Xếp dọc => trục chính là Oy
     justify-content: flex-end;// dọc đến cuối Oy
+    width: 100%;
+    box-sizing: border-box; // làm ngăn padding/boder làm tăng kích thước
+    margin: 0;
   }
   &-footer{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    gap: 77.5rem;
-    padding-bottom: 6.5rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 6.5rem;
+    padding: 0 15px;
+    
     &-top{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
       font-family: var(--primary-font);
       color: #F8F3ED;
       font-size: 5rem;
+      flex-shrink: 0;
     }
     &-bottom{
       font-family: var(--secondary-font);
@@ -315,6 +387,33 @@ body {
       text-decoration-line: underline;
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    &-header{
+      align-items: end;
+    }
+    &-image{
+      height: 244px;
+      width: 100%;
+    }
+    &-footer{
+      width: 100%;
+      padding: 0 16px 17px 16px;
+      justify-content: space-between;
+      margin-bottom: 0px;
+      &-top{
+        font-size: 3.2rem;
+      }
+      &-bottom{
+        font-size: 1.8rem;
+      }
+      &-point{
+        max-width: 75px;
+      }
+    }
+    
+  }
+  
 }
 
 .designer{
@@ -335,6 +434,14 @@ body {
     gap: 2.5rem;
     margin-bottom: 4rem;;
   }
+  @media screen and (max-width: 1024px) {
+  &-main{
+    flex-direction: column;
+    padding-top: 12rem;
+    gap: 7rem;
+  }
+  }
+  
 }
 
 .articles{
@@ -374,7 +481,38 @@ body {
   &-line{
     margin-bottom: 2rem;
   }
+
+  @media screen and (max-width: 1023.98px) {
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+    &-title{
+      gap: 3rem;
+      margin-bottom: 6rem;
+    }
+    &-image{
+      flex-direction: column;
+      gap: 8rem;
+    }
+    &-question{
+      font-size: 2rem;
+    }
+  }
+  
 }
+
+.mobile-none{
+  @media screen and (max-width: 1023.98px) {
+  display: none;
+  }
+}
+
+.pc-none{
+  @media screen and (min-width: 1024px) {
+  display: none;
+  }
+  
+}
+
 
 .contact{
   background-color: var(--primary-color);
@@ -384,6 +522,8 @@ body {
   align-items: center;
   gap: 1rem;
   padding-top: 8.7rem;
+  width: 100%;
+
   &-link{
     color: white;
     opacity: 0.4;
@@ -400,6 +540,7 @@ body {
     align-items: center;
     gap:24.5rem;
     margin-bottom: 10.9rem;
+    width: 100%;
   }
   &-title{
     font-family: var(--secondary-font);
@@ -429,10 +570,10 @@ body {
     opacity: 0.6;
   }
   &-footer{
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 43.5rem;
+    // gap: 43.5rem;
     margin-top: 3rem;
     margin-bottom: 1.7rem;
     &-text{
@@ -440,6 +581,32 @@ body {
       color: white;
       font-size: 2.4rem;
       opacity: 0.4;
+
+      flex-shrink: 0;
+    }    
+  }
+  @media screen and (max-width: 1023.98px) {
+    padding-top: 5.6rem;
+    &-body{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 11rem;
+      padding-top: 8rem;
+      margin-bottom: 6.2rem;
+    }
+    &-left{
+      gap: 4rem;
+    }
+    &-infor{
+      margin-top: 4rem;
+    }
+    &-mailAndPhone{
+      font-size: 3.6rem;
+    }
+    &-footer{
+      &-text{
+        font-size: 1.6rem;
+      }
     }
   }
 
